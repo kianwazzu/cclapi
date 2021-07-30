@@ -35,7 +35,7 @@ key=Sys.getenv("CO_API")
 flow="cf701519-8109-4626-ba0c-2dd9c515ce64"
 ```
 
-```{r example}
+```{r example, results=FALSE,message=FALSE,warning=FALSE}
 library(cclapi)
 library(dplyr)
 library(knitr) #for displaying results
