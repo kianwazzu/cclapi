@@ -23,5 +23,5 @@ This is not done yet :):
 
 ``` r
 library(cclapi)
-#get request for an api
+#get request for an flow
 ```

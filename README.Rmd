@@ -33,5 +33,5 @@ This is not done yet :):
 
 ```{r example}
 library(cclapi)
-#get request for an api
+#get request for an flow
 ```
