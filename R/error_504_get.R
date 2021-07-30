@@ -8,7 +8,7 @@
 #' @param key an API token
 #'
 #' @return a GET response
-#' @export
+#'
 #'
 #' @examples
 #' #NOT RUN error_504_get("www.timedoutrequest.com", myapikey)

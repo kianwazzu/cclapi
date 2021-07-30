@@ -16,5 +16,5 @@ a list
 Converts a GET or POST request from JSON to a list.
 }
 \examples{
-response_to_list(httr::GET("https://app.communityconnectlabs.com/api/v2/contacts.json"))
+#response_to_list(httr::GET("https://app.communityconnectlabs.com/api/v2/contacts.json"))
 }

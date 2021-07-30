@@ -8,7 +8,7 @@
 #' @param body a body for the POST request
 #'
 #' @return a POST response
-#' @export
+#'
 #'
 #' @examples
 #' #NOT RUN error_504_post("www.timedoutrequest.com", body= list(flow=1,variables=list(name=list(format="category"))),myapikey)
