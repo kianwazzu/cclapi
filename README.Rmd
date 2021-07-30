@@ -1,0 +1,37 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# cclapi
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of cclapi is to make downloading results from Community Connect Labs API easier ...
+
+## Installation
+
+You can install the released version of cclapi with:
+```r
+devtools::install_github("kianwazzu/cclapi")
+```
+
+## Example
+
+This is not done yet :):
+
+```{r example}
+library(cclapi)
+#get request for an api
+```
