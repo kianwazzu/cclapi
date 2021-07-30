@@ -35,10 +35,12 @@ key=Sys.getenv("CO_API")
 flow="cf701519-8109-4626-ba0c-2dd9c515ce64"
 ```
 
-```{r example, results=FALSE,message=FALSE,warning=FALSE}
+```{r example,results=FALSE,message=FALSE,warning=FALSE}
 library(cclapi)
 library(dplyr)
 library(knitr) #for displaying results
 api_results <- get_flow(flow = flow,url = "https://app.communityconnectlabs.com/api/v2/contacts_report.json?flow=",key=key)
+```
+```{r}
 kable(api_results)
 ```

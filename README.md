@@ -26,5 +26,12 @@ library(cclapi)
 library(dplyr)
 library(knitr) #for displaying results
 api_results <- get_flow(flow = flow,url = "https://app.communityconnectlabs.com/api/v2/contacts_report.json?flow=",key=key)
+```
+
+``` r
 kable(api_results)
 ```
+
+| total\_unique\_contacts | flow                                 |
+|------------------------:|:-------------------------------------|
+|                  101412 | cf701519-8109-4626-ba0c-2dd9c515ce64 |
