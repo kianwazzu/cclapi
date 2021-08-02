@@ -4,7 +4,7 @@
 \alias{get_flow}
 \title{get flow}
 \usage{
-get_flow(flow = NULL, url, key, sum = TRUE)
+get_flow(flow = NULL, url, key, mutate_flow = TRUE, sum = TRUE)
 }
 \arguments{
 \item{flow}{a flow uuid}
@@ -13,6 +13,8 @@ get_flow(flow = NULL, url, key, sum = TRUE)
 and other queries before "flow="}
 
 \item{key}{an API token}
+
+\item{mutate_flow, }{TRUE/FALSE if you wish to mutate a flow column. set to false for runs, endpoint}
 
 \item{sum}{TRUE/FALSE to sum results or not}
 }

@@ -8,6 +8,7 @@
 #' @param url url formatted: "https:://app.communityconnectlabs.com/api/v2/endpoint.json?flow=" url must end in "flow=" can include groups
 #' and other queries before "flow="
 #' @param key an API token
+#' @param mutate_flow, TRUE/FALSE if you wish to mutate a flow column. set to false for runs, endpoint
 #' @param sum TRUE/FALSE to sum results or not
 #'
 #' @return a dataframe
@@ -20,7 +21,7 @@
 #' #NOT RUN - With additional query get_flow(flow=uuid12345,url="https://app.communityconnectlabs.com/api/v2/contacts_report.json?group=Opted-Out&flow=",
 #' #key = myAPIkey, sum = TRUE)
 #'
-get_flow <- function(flow=NULL,url,key, sum=TRUE){
+get_flow <- function(flow=NULL,url,key,mutate_flow=TRUE, sum=TRUE){
   url <- paste(url,flow,sep = "")
   temp_fr<- httr::GET(url,httr::add_headers(AUTHORIZATION = paste(" Token ", key)))
   status<- httr::status_code(temp_fr)
@@ -60,7 +61,8 @@ get_flow <- function(flow=NULL,url,key, sum=TRUE){
     if(sum){
     temp_fr <- temp_fr %>%  dplyr::transmute_all(~replace(.,is.na(.),0))
     temp_fr <- temp_fr %>% dplyr::summarise_all(dplyr::funs(sum))}
-    temp_fr <- temp_fr %>% dplyr::mutate(flow=flow)
+    if(mutate_flow){
+    temp_fr <- temp_fr %>% dplyr::mutate(flow=flow)}
   }
   return(temp_fr)
 }
