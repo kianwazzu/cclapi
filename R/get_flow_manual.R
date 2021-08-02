@@ -54,7 +54,6 @@ get_flow_manual <- function(url,key,sum=TRUE){
     if(sum){
      temp_fr <- temp_fr %>%  dplyr::transmute_all(~replace(.,is.na(.),0))
      temp_fr <- temp_fr %>% dplyr::summarise_all(dplyr::funs(sum))}
-     temp_fr <- temp_fr %>% dplyr::mutate(flow=flow)
   }
   return(temp_fr)
 }
