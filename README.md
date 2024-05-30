@@ -19,8 +19,6 @@ devtools::install_github("kianwazzu/cclapi")
 
 ## Example
 
-This is not done yet 
-
 ``` r
 library(cclapi)
 library(dplyr)
